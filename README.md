@@ -82,9 +82,7 @@ d = 1
 
 A grid of ARIMA models was estimated using:
 
-\[
-ARIMA(p,1,q), \quad 1 \leq p \leq 4,\quad 1 \leq q \leq 4
-\]
+`ARIMA(p, 1, q)`, where `1 ≤ p ≤ 4` and `1 ≤ q ≤ 4`.
 
 A total of 16 candidate models were compared using the Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC). The full model selection table is available in:
 
@@ -108,9 +106,7 @@ Both AIC and BIC selected **ARIMA(1,1,3)** as the best-performing model. Since t
 
 The final selected model is:
 
-\[
-ARIMA(1,1,3)
-\]
+`ARIMA(1, 1, 3)`
 
 The fitted model includes one autoregressive term and three moving-average terms after first differencing. Among the estimated coefficients, the third moving-average component was statistically important, suggesting that the model captures short-run shock effects in the differenced series.
 
@@ -160,9 +156,9 @@ The selected ARIMA(1,1,3) model was used to produce a 100-step ahead forecast. T
 
 The out-of-sample forecast accuracy was measured using Mean Squared Error:
 
-\[
-MSE = \frac{1}{n}\sum_{t=1}^{n}(y_t - \hat{y}_t)^2
-\]
+Mean Squared Error was calculated as:
+
+`MSE = (1 / n) * sum((y_t - y_hat_t)^2)`
 
 The resulting test-set MSE was:
 
